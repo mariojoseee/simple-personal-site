@@ -44,7 +44,7 @@ const dataSkill = [
 const skills = document.getElementById("skillData");
 dataSkill.forEach((element) => {
 	skillData.innerHTML += `
-	<div class="${element.classSkill}">
+	<div class="${element.classSkill}" data-aos="zoom-in-right" data-aos-duration="800">
 		<img class="${element.classImg}" src="${element.src}" alt="${element.alt}" />
 		<div>
 			<h3>${element.title}</h3>

@@ -323,6 +323,10 @@ hr {
 	.contact-me {
 		width: 48%;
 	}
+
+	.bottom-container p {
+		font-size: 1rem;
+	}
 }
 
 /* 2. Tablet */

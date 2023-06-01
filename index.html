@@ -12,6 +12,8 @@
 		<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Montserrat&family=Neucha&display=swap" rel="stylesheet" />
 		<!-- Feather Icons -->
 		<script src="https://unpkg.com/feather-icons"></script>
+		<!-- AOS -->
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	</head>
 	<body>
 		<!-- NAVBAR -->
@@ -29,17 +31,17 @@
 		</nav>
 		<!-- TOP CONTAINER -->
 		<section class="top-container" id="home">
-			<img class="top-cloud" src="images/cloud.png" alt="cloud-img" />
+			<img class="top-cloud" src="images/cloud.png" alt="cloud-img" data-aos="fade-left" data-aos-duration="1500" />
 			<h1>I'm Mario</h1>
 			<h2 class="profession">Junior Web Developer</h2>
-			<img class="bottom-cloud" src="images/cloud.png" alt="cloud-img" />
+			<img class="bottom-cloud" src="images/cloud.png" alt="cloud-img" data-aos="fade-right" data-aos-duration="1500" />
 			<div>
 				<img class="img-mountain" src="images/mountain.png" alt="cloud-img" />
 			</div>
 		</section>
 		<!-- MIDDLE CONTAINER -->
 		<section class="middle-container">
-			<div class="profile">
+			<div class="profile" data-aos="zoom-in-down" data-aos-duration="1000">
 				<img src="images/mario.jpg" alt="img-profile" />
 				<h2>Hello.</h2>
 				<p>
@@ -55,7 +57,7 @@
 				</div>
 			</div>
 			<hr />
-			<div class="contact-me">
+			<div class="contact-me" data-aos="zoom-out-up" data-aos-duration="600">
 				<h2>Get In Touch</h2>
 				<h3>If you have the same interest as me.</h3>
 				<p class="contact-message">Let's learn and grow together! If you have an interest in programming, especially in the website field. Let's get in touch. We will do the coding together.</p>
@@ -64,9 +66,9 @@
 		</section>
 		<!-- BOTTOM CONTAINER -->
 		<footer class="bottom-container">
-			<a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
-			<a class="footer-link" href="https://twitter.com/">Twitter</a>
-			<a class="footer-link" href="https://insatgram.com/">Instagram</a>
+			<a class="footer-link" href="https://www.linkedin.com/in/mariojoseee/" target="_blank">LinkedIn</a>
+			<a class="footer-link" href="https://twitter.com/" target="_blank">Twitter</a>
+			<a class="footer-link" href="https://www.instagram.com/mariojosee__/" target="_blank">Instagram</a>
 			<p class="copyright">© 2022 Mario Jose.</p>
 		</footer>
 		<!-- Feather Icons -->
@@ -75,5 +77,10 @@
 		</script>
 		<!-- My Javascript -->
 		<script src="js/script.js"></script>
+		<!-- AOS -->
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
 	</body>
 </html>
