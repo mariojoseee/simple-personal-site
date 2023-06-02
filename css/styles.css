@@ -87,6 +87,10 @@ hr {
 	color: var(--font-secondary);
 }
 
+.navbar .navbar-nav-large {
+	display: none;
+}
+
 .navbar .navbar-nav {
 	position: absolute;
 	top: 100%;
@@ -129,6 +133,10 @@ hr {
 
 #hamburger-menu {
 	color: var(--font-primary);
+}
+
+.hamburger {
+	display: inline-block;
 }
 
 /* Hero Section (Top Container) */
@@ -174,7 +182,7 @@ hr {
 }
 
 .profile {
-	width: 39%;
+	width: 60%;
 	margin: 0 auto;
 	line-height: 2;
 }
@@ -191,7 +199,7 @@ hr {
 }
 
 .skills {
-	width: 55%;
+	width: 60%;
 	margin: 0 auto;
 }
 
@@ -199,27 +207,22 @@ hr {
 	margin-top: 5rem;
 	text-align: justify;
 	line-height: 2;
-	display: flex;
-	align-items: center;
+	display: block;
 }
 
 .skill-row-right {
 	margin-top: 5rem;
 	text-align: justify;
 	line-height: 2;
-	display: flex;
-	align-items: center;
-	flex-direction: row-reverse;
+	display: block;
 }
 
 .img-skill-left {
 	height: 12rem;
-	margin-right: 3rem;
 }
 
 .img-skill-right {
 	height: 12rem;
-	margin-left: 3rem;
 }
 
 /* Footer (Bottom Container) */
@@ -248,7 +251,7 @@ hr {
 .copyright {
 	margin-top: 2rem;
 	color: #eaf6f6;
-	font-size: 0.8rem;
+	font-size: 0.5rem;
 	padding: 0.5rem 0;
 }
 
@@ -289,7 +292,7 @@ hr {
 
 /* MEDIA QUERIES */
 /* 1. Monitor */
-@media (min-width: 1024px) and (max-width: 2560px) {
+@media (min-width: 1280px) and (max-width: 2560px) {
 	h1 {
 		font-size: 4rem;
 	}
@@ -310,35 +313,61 @@ hr {
 		display: none;
 	}
 
-	.navbar .navbar-logo {
-		font-size: 1.9rem;
-	}
-
 	.navbar .navbar-nav {
-		padding: 1rem 5rem;
+		display: none;
 	}
 
-	.top-container {
-		height: calc(100vh - 5.3rem);
+	.navbar .navbar-nav-large {
+		display: flex;
+		padding: 0.5rem 5rem;
+	}
+
+	.navbar .navbar-nav-large a {
+		color: var(--font-primary);
+		display: inline-block;
+		font-size: 1.2rem;
+		margin: 0 1rem;
+	}
+
+	.navbar .navbar-nav-large a:hover {
+		color: var(--font-secondary);
+	}
+
+	.navbar .navbar-nav-large a::after {
+		content: "";
+		display: block;
+		padding-bottom: 0.5rem;
+		border-bottom: 0.1rem solid var(--font-secondary);
+		transform: scaleX(0);
+		transition: 0.2s linear;
+		transform-origin: 50% 50% 0;
+	}
+
+	.navbar .navbar-nav-large a:hover::after {
+		transform: scaleX(0.6);
+	}
+
+	.profession {
+		font-size: 1.7rem;
 	}
 
 	.top-cloud {
 		right: 20%;
 		top: 8%;
-		width: 13rem;
+		width: 11rem;
 	}
 
 	.bottom-cloud {
 		left: 20%;
 		bottom: 60%;
-		width: 13rem;
+		width: 11rem;
 	}
 
 	.img-mountain {
-		height: 32rem;
+		height: 20rem;
 		position: absolute;
-		bottom: -16rem;
-		transform: translate(-50%, -50%);
+		bottom: 0;
+		transform: translate(-50%);
 	}
 
 	.profile {
@@ -347,6 +376,28 @@ hr {
 
 	.skills {
 		width: 45%;
+		margin: 0 auto;
+	}
+
+	.skill-row-left {
+		display: flex;
+		align-items: center;
+	}
+
+	.skill-row-right {
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+	}
+
+	.img-skill-left {
+		height: 12rem;
+		margin-right: 3rem;
+	}
+
+	.img-skill-right {
+		height: 12rem;
+		margin-left: 3rem;
 	}
 
 	.contact-me {
@@ -355,172 +406,5 @@ hr {
 
 	.bottom-container p {
 		font-size: 1rem;
-	}
-}
-
-/* 2. Tablet */
-@media (min-width: 641px) and (max-width: 884px) {
-	.hamburger {
-		display: inline-block;
-	}
-
-	.navbar .navbar-nav {
-		position: absolute;
-		top: 100%;
-		right: -100%;
-		background-color: #f1f5f9;
-		width: 23rem;
-		height: 100vh;
-		transition: 0.5s;
-	}
-
-	.navbar .navbar-nav.active {
-		right: 0;
-	}
-
-	.navbar .navbar-nav a {
-		display: block;
-		text-align: left;
-		margin: 2rem;
-		font-size: 1.6rem;
-	}
-
-	.navbar .navbar-nav a::after {
-		transform-origin: 0 0;
-	}
-
-	.navbar .navbar-nav a:hover::after {
-		transform: scaleX(0.2);
-	}
-
-	.navbar .navbar-logo {
-		font-size: 1.8rem;
-	}
-
-	.top-container {
-		height: calc(100vh - 5.2rem);
-	}
-
-	.top-cloud {
-		right: 10%;
-		top: 48%;
-		width: 15rem;
-	}
-
-	.bottom-cloud {
-		left: 10%;
-		bottom: 55%;
-		width: 15rem;
-	}
-
-	.img-mountain {
-		height: 28rem;
-		position: absolute;
-		bottom: -14rem;
-		transform: translate(-50%, -50%);
-	}
-
-	.profile {
-		width: 50%;
-	}
-}
-
-/* 3. Mobile Phone */
-@media (min-width: 320px) and (max-width: 640px) {
-	h1 {
-		font-size: 2.5rem;
-	}
-
-	h2 {
-		font-size: 2rem;
-	}
-
-	.navbar .navbar-logo {
-		font-size: 1.3rem;
-	}
-
-	.top-container {
-		height: calc(100vh - 5.3rem);
-	}
-
-	.top-cloud {
-		right: 10%;
-		top: 60%;
-		width: 7rem;
-	}
-
-	.bottom-cloud {
-		left: 10%;
-		bottom: 40%;
-		width: 7rem;
-	}
-
-	.img-mountain {
-		height: 12rem;
-		position: absolute;
-		bottom: -6rem;
-		transform: translate(-50%, -50%);
-	}
-
-	.navbar .navbar-nav a {
-		font-size: 1.2rem;
-	}
-
-	.navbar .navbar-nav {
-		width: 16rem;
-	}
-
-	.middle-container {
-		padding-top: 6rem;
-	}
-
-	.profile {
-		width: 62%;
-		margin: 0 auto;
-		line-height: 2;
-	}
-
-	.profile img {
-		width: 200px;
-		height: 200px;
-		border-radius: 100px;
-		overflow: hidden;
-	}
-
-	.profile h2 {
-		padding: 1rem 0;
-	}
-
-	.skills {
-		width: 62%;
-		margin: 0 auto;
-	}
-
-	.skill-row-right {
-		margin-top: 5rem;
-		text-align: justify;
-		line-height: 2;
-		display: block;
-	}
-
-	.skill-row-left {
-		margin-top: 5rem;
-		text-align: justify;
-		line-height: 2;
-		display: block;
-	}
-
-	.img-skill-left {
-		height: 12rem;
-	}
-
-	.img-skill-right {
-		height: 12rem;
-	}
-
-	.contact-message {
-		padding: 1.8rem 0 2.5rem 0;
-		margin: 0 auto;
-		line-height: 2;
 	}
 }
